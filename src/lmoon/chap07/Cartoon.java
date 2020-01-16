@@ -13,6 +13,9 @@ class Art {
     Art(String s) {
         System.out.println("Art constructor");
     }
+    void test(){
+        System.out.println("test in Art");
+    }
 }
 class Drawing extends Art {
     Drawing(String a) {
@@ -21,5 +24,11 @@ class Drawing extends Art {
     Drawing() {
         super("");
         System.out.println("Drawing constructor");
+    }
+
+    @Override
+    void test() {
+        super.test();
+        System.out.println("test in Drawing");
     }
 }
